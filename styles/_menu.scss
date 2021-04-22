@@ -8,7 +8,22 @@
 .locations-header {
   min-height: 20vh;
   width: 100%;
-  @include flex(column, center, center);
+  @include flex(column, space-evenly, center);
+  .destination-categories {
+    @include flex(row, space-evenly, center);
+    .btn {
+      padding: 10px 20px;
+      background: $black;
+      color: $white;
+      border: 2px solid $black;
+      transition: all 0.3s ease;
+      margin: 0 10px;
+      &:hover {
+        background: $white;
+        color: $black;
+      }
+    }
+  }
 }
 
 .locations-content {
@@ -18,10 +33,11 @@
   grid-template-columns: repeat(auto-fill, 400px);
   grid-template-rows: repeat(auto-fill, 320px);
   gap: 5rem;
+  padding: 0 100px;
 }
 
 .location-item {
-  background: $gradient, url("../img/item-2.jpg") center/cover no-repeat;
+  background: $gradient, url("../img/img-1.jpg") center/cover no-repeat;
   color: $white;
   padding: 10px;
   border-radius: 12px;
